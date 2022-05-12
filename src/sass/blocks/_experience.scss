@@ -1,0 +1,91 @@
+.experience {
+    min-height: 500px;
+    padding: 120px 0 0 0;
+    background-color: $back;
+    &__box {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 135px;
+    }
+    &__list {                
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 50px;
+        position: relative;               
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: $v;
+        &:before {
+            content: '';
+            width: 40%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            top: 30px;
+            background-color: $v;
+        }
+    }
+    &__item {
+        margin-top: 45px;
+        &:before {
+            content: '';
+            width: 1px;
+            height: calc(100% - 30px);
+            position: absolute;
+            left: 0;
+            top: 30px;
+            background-color: $v;
+        }       
+    }
+    &__head {
+        display: grid;
+        grid-template-rows: 40px;
+        grid-template-columns: 40px 1fr;
+        column-gap: 20px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 50px;
+            height: 1px;
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            background-color: $v;
+        }
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $v;
+        transform: translateX(1px);
+        svg path {
+            fill: $v;
+        }
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        color: $v;
+        &-descr {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: $v;
+        }
+    }
+    &__descr {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: $b;
+    }
+}

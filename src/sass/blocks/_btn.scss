@@ -1,0 +1,34 @@
+.btn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $v;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;    
+    background-color: transparent;
+    color: $v;
+    transition: all 0.3s;
+    &:focus, &:active {
+        outline: none;
+        background-color: $w;
+        color: $v;
+    }
+    &:hover {
+        background-color: $w;
+        color: $v;
+        border: none;
+        box-shadow: 1.5px 1.5px 10px $v;
+    }
+    &_promo {
+        width: 135px;
+        height: 45px;
+        margin-top: 25px;
+        margin-right: 25px;
+    }
+    &_contacts {
+        border-radius: 0;
+        width: 220px;
+        height: 45px;
+    }    
+}

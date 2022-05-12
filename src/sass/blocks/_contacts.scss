@@ -1,0 +1,135 @@
+.contacts {
+    min-height: 810px;
+    padding: 120px 0 90px 0;
+    background-color: $back;
+    &__box {
+        display: grid;
+        grid-template-columns: 400px 700px;
+        justify-content: space-between;
+    }
+    &__photo {
+        width: 400px;
+        height: 600px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        display: grid;
+    }    
+    &__lets {
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        color: $b;
+    }
+    &__icons {
+        margin-top: 20px;
+    }
+    &__icons {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__icon {
+        margin-right: 25px;
+        width: 30px;
+        height: 30px;
+        svg {
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            path {
+                fill: $v;
+            }
+            &:hover {
+                animation-name: contacts;
+                animation-duration: 0.3s;
+                animation-timing-function: linear;
+                animation-fill-mode:forwards;
+                box-shadow: 3px 3px 10px $v;
+                border-radius: 100%;
+                background-color: $v;
+                path {
+                    fill: $w;
+                }                 
+            } 
+        }
+    }
+    &__info-bottom {
+        align-self: flex-end;
+    }
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template-rows: 45px 1fr;
+        gap: 30px;
+        div {
+            position: relative;
+        }
+        span {
+            position: absolute;
+            left: 15px;
+            transform: translateY(-50%);
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 12px;
+            color: $v;
+            background: linear-gradient(to bottom, $back 50%, $w 50%);
+            padding: 0 5px;
+        }    
+        input {
+            width: 100%;
+            height: 100%;
+            color: $b;
+            padding: 0 10px; 
+            border: none;
+            outline-width: 1px;
+            outline-style: solid;
+            outline-color: $v;    
+        }  
+        textarea {
+            width: 100%;
+            height: 100%;
+            color: $b;
+            padding: 10px 15px; 
+            border: none;
+            outline-width: 1px;
+            outline-style: solid;
+            outline-color: $v; 
+            resize: none;
+            grid-column: 1 / 3;    
+        } 
+        &-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 30px;
+            justify-content: space-between;
+        }
+        &-bottom {
+            display: grid;
+            grid-template-rows: 250px 45px;
+            grid-template-columns: 1fr auto;
+            row-gap: 30px;
+            button {
+                transform: translateX(-1px);
+                background-color: $v;
+                color: $w;
+            }
+            .policy {
+                display: flex;
+                align-items: center;
+                input {
+                    width: 11px;
+                    height: 11px;
+                    outline: none;
+                    margin-right: 10px;
+                } 
+            }
+        }                       
+    }    
+}

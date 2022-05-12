@@ -1,0 +1,46 @@
+.social {
+    position: fixed;    
+    width: 340px;
+    height: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(calc(-50% + 42px)) translateY(calc(50vh + 50%)) rotateZ(-90deg);    
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $v;
+    }
+    &__line {
+        width: 70px;
+        height: 1px;
+        background-color: $v;
+        margin: 0 15px;
+    }    
+    &__icons {
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__icon {
+        svg {
+            display: block;
+            margin: 0;
+            padding: 0;
+            path {
+                fill: $v;
+            }
+            &:hover {
+                animation-name: social;
+                animation-duration: 0.3s;
+                animation-timing-function: linear;
+                animation-fill-mode:forwards;                  
+            } 
+        }
+    }
+}
+
+

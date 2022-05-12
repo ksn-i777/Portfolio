@@ -1,0 +1,48 @@
+@keyframes social {
+    from {
+        transform: rotateZ(0deg) scale(1);
+    }
+    50% {
+        transform: rotateZ(45deg) scale(1.35);
+    }
+    to {
+        transform: rotateZ(90deg) scale(1.7);
+    }
+}
+
+@keyframes humburger {
+    from {
+        height: 15px;
+    }
+    50% {
+        height: 20px;
+    }
+    to {
+        height: 25px;        
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes menu-social {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.35);
+    }
+    to {
+        transform: scale(1.7);
+    }
+}
+
+@keyframes contacts {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
