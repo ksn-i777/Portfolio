@@ -32,7 +32,7 @@ $mail->Subject = 'Данные';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . ' <br>
-	E-mail: ' . $phone . '<br>
+	E-mail: ' . $email . '<br>
 	Сообщение: ' . $textarea . '';
 
 if(!$mail->send()) {

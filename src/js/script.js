@@ -17,7 +17,7 @@ closeElem.addEventListener('click', () => {
 
 $(document).ready(function(){
     
-    $('form').submit(function(e) {
+    $('contacts__form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -25,7 +25,7 @@ $(document).ready(function(){
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('form').trigger('reset');
+            $('contacts__form').trigger('reset');
         });
         return false;
     });
