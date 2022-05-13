@@ -12,3 +12,21 @@ closeElem.addEventListener('click', () => {
     overlay.classList.remove('active'),
     menu.classList.remove('active');
 });
+
+//скрипт для локального сервера и проверки отправки данных на почту
+
+$(document).ready(function(){
+    
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+});
