@@ -15,9 +15,8 @@ closeElem.addEventListener('click', () => {
 
 //скрипт для локального сервера и проверки отправки данных на почту
 
-$(document).ready(function(){
-    
-    $('contacts__form').submit(function(e) {
+$(document).ready(function() {    
+    $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -25,7 +24,7 @@ $(document).ready(function(){
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('contacts__form').trigger('reset');
+            $('form').trigger('reset');
         });
         return false;
     });
